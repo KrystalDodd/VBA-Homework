@@ -1,5 +1,7 @@
 # VBA-Homework
 
+
+#Code for VBA Homework
 Sub MultiYearStockData()
 
 Dim WS As Worksheet
@@ -42,19 +44,19 @@ For i = 2 To Lastrow
     TotalStockVolume = TotalStockVoume + Cells(i, 7).Value
     TableRow = TableRow + 1
     Counter = Counter + 1
+            End If
         End If
-    
-        End If
-        
+             
     If Cells(i, 11).Value > 0 Then
         Cells(i, 11).Interior.ColorIndex = 4
             ElseIf Cells(i, 11).Value < 0 Then
                 Cells(i, 11).Interior.ColorIndex = 3
                 
          End If
+      
 
      Next i
         
-    Next WS
+  Next WS
 
 End Sub
